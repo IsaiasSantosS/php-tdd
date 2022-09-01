@@ -47,4 +47,18 @@ class ProdutoTest extends TestCase
 
         $this->assertEquals('produto-1', $produto->getSlug(), 'Slugs não são iguais');
     }
+
+    public function testIncompleto()
+    {
+        $this->assertTrue(true);
+        $this->markTestIncomplete('Teste de informa que foi o teste tá incompleto');
+    }
+
+    public function testParaVersaoEspecificaDoPHP53()
+    {
+        if(PHP_VERSION != 5.3){
+            $this->markTestSkipped('Versão do PHP não é 5.3');
+        }
+        $this->assertTrue(true);
+    }
 }

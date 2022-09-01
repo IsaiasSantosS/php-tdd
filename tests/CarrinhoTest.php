@@ -28,10 +28,37 @@ class CarrinhoTest extends TestCase
         unset($this->produto);
     }
 
-    public function testSeClasseCarrinhoExiste()
+    /*
+    * Executar uma vez antes dos testes
+    */
+    public static function setUpBeforeClass()
+    {
+        
+    }
+
+    /*
+    * Executar uma vez despois dos testes
+    */
+    public static function tearDownAfterClass()
+    {
+        
+    }
+
+    /*
+    * Pré condição para executar os teste
+    */
+    protected function assertPreConditions()
     {
         $classe = class_exists('\\Code\\Carrinho');
         $this->assertTrue($classe);
+    }
+
+    /*
+    * Pos condição para executar os teste
+    */
+    protected function assertPosConditions()
+    {
+
     }
 
     public function testAdicionarProdutosNoCarrinho()
